@@ -1,8 +1,8 @@
 # EasyCar
+
 ## Project Overview
 
 EasyCar a pour but de créer un site web dédié à la location de voitures en utilisant HTML, un Framework CSS et également du JavaScript pour une expérience utilisateur optimale.
-
 
 ## Key Links
 
@@ -12,7 +12,7 @@ Review the design mockup for our website on Figma for a sneak peek into our visu
 
 ### 2. Live Demo
 
-Experience the live demo of our website to see the project in action: [EasyCar](...)
+Experience the live demo of our website to see the project in action: [EasyCar](https://bouanani-soufiane.github.io/EasyCar/)
 
 ### 3. Jira Board
 
@@ -22,5 +22,4 @@ Visit our Jira board to keep track of project progress and tasks: [EasyCar](http
 
 Explore the detailed project brief and design concepts on our Canva presentation: [EasyCar Canva Presentation](.....)
 
-## Some  Resources :
-
+## Some Resources :
