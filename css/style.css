@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --clr-blue: #026dfe;
+    --clr-gris: #3B3A3A;
+    --clr-black : #000;
+  
+    --ff-primary: "Poppins", sans-serif;
+  
+    --fs-300: 0.8125rem; /*13px*/
+    --fs-400: 0.875rem; /*14px*/
+    --fs-500: 0.9375rem; /*15px*/
+    --fs-600: 1rem; /*16px*/
+    --fs-700: 1.875rem; /*30px*/
+    --fs-800: 2.5rem; /*40px*/
+    --fs-900: 2.5rem; /*40px*/
+  }
+
+
+
+/* general styling */
+
+
+/* end general styling */
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* nav bar */
+.navbar-nav a {
+  color: #fff;
+}
+.navbar-nav a:hover{
+    color: var(--clr-blue);
+}
+.navbar-brand img {
+  width: 80px;
+}
+.navbar-nav {
+  align-items: center;
+}
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+}
+@media screen and (min-width: 768px) {
+  .navbar-brand img {
+    width: 100px;
+  }
+  .navbar-brand {
+    margin-right: 0;
+    padding: 0 1em;
+  }
+}
+/* -------------------------------------------------------------------------------------------------------- */
+/* footer */
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+
+.footer-logo {
+  margin-bottom: 5px;
+}
+.footer-logo img {
+  max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #7e7e7e;
+  line-height: 22px;
+}
+
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: var(--clr-blue);
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover {
+  color: var(--clr-blue);
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2e2e2e;
+  border: 1px solid #2e2e2e;
+  color: #fff;
+}
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: var(--clr-blue);
+  padding: 13px 20px;
+  border: 1px solid var(--clr-blue);
+  top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* home page */
+
+
+/* end home page */
+
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* about page page */
+
+
+/* end about page */
+
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* contact us page page */
+
+
+/* end contact us page */
+
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* reservation page page */
+
+
+/* end reservation page */
