@@ -148,7 +148,32 @@ ul {
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* about page page */
+.about-first-page{
+  width: 100vw;
+  height: 100vh;
+}
+.about-first-page{
+ background-image: url(../images/aboutfirst-pic.jpg);
+ 
+ background-size: cover;
+ background-position: bottom;
 
+}
+.about-first-page h1{
+  font-size: var(--fs-200);
+  line-height: 50vh;
+  font-size: var(--fs-700);
+}
+.about-first-page h2{
+  font-size: 20vw;
+  line-height: 30%;
+}
+.color-overlay-about{
+  width: 100%;
+  height: 100%;
+  background-color: #00000095;
+  color: white
+}
 /* end about page */
 
 /* -------------------------------------------------------------------------------------------------------- */
