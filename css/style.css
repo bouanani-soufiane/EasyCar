@@ -158,7 +158,7 @@ ul {
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* reservation page page */
-.reservation-header {
+header.reservation-header {
   background-image: url("../images/reservation-bg.png");
   background-repeat: no-repeat;
   background-position: center;
