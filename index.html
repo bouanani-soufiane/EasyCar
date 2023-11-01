@@ -1,137 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" href="./images/logofooter.png" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand d-md-none" href="#">
-            <img src="./images/logo.png" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item mx-3">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./about-us.html">About Us</a>
-              </li>
-              <a class="navbar-brand d-none d-md-block mx-5" href="#">
-                <img src="./images/logo.png" alt="logo" />
-              </a>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./reservation.html">Reservation</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./contact-us.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>index</main>
-    <footer class="footer-section">
-      <div class="container">
-        <div class="footer-content pt-5 pb-5">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 mb-50">
-              <div class="footer-widget">
-                <div class="footer-logo">
-                  <a href="index.html"
-                    ><img
-                      src="./images/logofooter.png"
-                      class="img-fluid"
-                      alt="logo"
-                  /></a>
-                </div>
-                <div class="footer-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
-                    sed do eiusmod tempor incididuntut consec tetur adipisicing
-                    elit,Lorem ipsum dolor sit amet.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Useful Links</h3>
-                </div>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1q+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./images/logofooter.png" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-md-none" href="#">
+          <img src="./images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./about-us.html">About Us</a>
+            </li>
+            <a class="navbar-brand d-none d-md-block mx-5" href="#">
+              <img src="./images/logo.png" alt="logo" />
+            </a>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+  <main>
+
+
+
+    <section>
+      <div class="overlay"></div>
+      <div class="first-section">
+        <div class="home-description">
+          <p>Extensive vehicle selection, competitive rates, and easy online booking. Explore our fleet today!</p>
+        </div>
+        <div class="home-buttons">
+          <button class="reserve">Reserve</button>
+          <button class="info">More Infos</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="second-section">
+      <div class="container pb-4">
+        <div class="row col-sm-12 pt-4 text-center">
+          <p class="services-title">Our Services</p>
+        </div>
+        <div class="row my-5 justify-content-center ">
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/ismail/Services-box-1.png" style="height: 14.25rem;" class="card-img-top"
+                alt="Car Sharing">
+              <div class="card-body">
+                <h5 class="card-title">Car Sharing</h5>
+                <p class="card-text">Peer-to-peer car sharing service, enabling straightforward local vehicle rentals.
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Subscribe</h3>
-                </div>
-                <div class="footer-text mb-25">
-                  <p>
-                    Don’t miss to subscribe to our new feeds, kindly fill the
-                    form below.
-                  </p>
-                </div>
-                <div class="subscribe-form">
-                  <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="fab fa-telegram-plane"></i></button>
-                  </form>
-                </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/ismail/Services-box-2.png" style="height: 14.25rem;" class="card-img-top"
+                alt="Chauffeur Services">
+              <div class="card-body">
+                <h5 class="card-title">Chauffeur Services</h5>
+                <p class="card-text">Professional drivers at your service, ensuring safe and comfortable rides for all
+                  your journeys.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/ismail/Services-box-3.png" style="height: 14.25rem;;" class="card-img-top" alt="Sedane">
+              <div class="card-body">
+                <h5 class="card-title">Sedane</h5>
+                <p class="card-text">Standard car rentals for your daily commute or travel needs, tailored to
+                  accommodate all requirements.</p>
+                <a href="#" class="btn btn-primary">View More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </section>
+
+
+
+
+
+    <section>
+      <div class="container pb-4">
+        <div class="row col-sm-12 pt-4 text-center">
+          <p class="category">Our Category</p>
+          <p class="sous-category">Sport</p>
+        </div>
+        <div class="row my-5 justify-content-end">
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">Sports Car</h5>
+                <img src="images/car-sport2.png" class="card-img-top" alt="Sport">
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard
+                  dummy text ever since the 1500s,
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">SUV</h5>
+                <img src="images/car-suv3.png" class="card-img-top" alt="suv">
+                <p class="card-text">Professional drivers at your service, ensuring safe and comfortable rides for all
+                  your journeys.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">Sedane</h5>
+                <img src="images/car-sedan3.png" class="card-img-top" alt="sedane">
+                <p class="card-text">Standard car rentals for your daily commute or travel needs, tailored to
+                  accommodate all requirements.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container pb-4">
+        <div class="row col-sm-12 pt-4 text-center">
+          <p class="sous-category">SUV</p>
+        </div>
+        <div class="row my-5 justify-content-end">
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">SUV</h5>
+                <img src="images/car-suv1.png" class="card-img-top" alt="Suv">
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum
+                  has been the industry's standard
+                  dummy text ever since the 1500s,
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">SUV</h5>
+                <img src="images/car-suv3.png" class="card-img-top" alt="suv">
+                <p class="card-text">Professional drivers at your service, ensuring safe and comfortable rides for all
+                  your journeys.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">SUV</h5>
+                <img src="images/car-suv6.png" class="card-img-top" alt="sedane">
+                <p class="card-text">Standard car rentals for your daily commute or travel needs, tailored to
+                  accommodate all requirements.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section>
+      <div class="container pb-4">
+        <div class="row col-sm-12 pt-4 text-center">
+          <p class="sous-category">Sedane</p>
+        </div>
+        <div class="row my-5 justify-content-end">
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">Sedane</h5>
+                <img src="images/car-sport.png" class="card-img-top" alt="Sedane">
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum
+                  has been the industry's standard
+                  dummy text ever since the 1500s,
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">Sedane</h5>
+                <img src="images/car-sedan1.png" class="card-img-top" alt="suv">
+                <p class="card-text">Professional drivers at your service, ensuring safe and comfortable rides for all
+                  your journeys.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <div class="card-body">
+                <h5 class="card-title-category">Sedane</h5>
+                <img src="images/car-sedan2.png" class="card-img-top" alt="sedane">
+                <p class="card-text">Standard car rentals for your daily commute or travel needs, tailored to
+                  accommodate all requirements.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section>
+      <div class="container pb-4">
+        <div class="row col-sm-12 pt-4 text-center">
+          <p class="services-title">Latest news</p>
+        </div>
+        <div class="row my-5 justify-content-center ">
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/news-1.png" style="height: 14.25rem;" class="card-img-top"
+                alt="new">
+              <div class="card-body">
+                <h5 class="card-title">Electric Cars Surge in Popularity</h5>
+                <p class="card-text-news">Electric vehicles continue to gain traction worldwide, with major automakers unveiling new models and governments
+                offering incentives to promote green transportation.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/new-2.png" style="height: 14.25rem;" class="card-img-top"
+                alt="Chauffeur Services">
+              <div class="card-body">
+                <h5 class="card-title">Autonomous Driving Advancements</h5>
+                <p class="card-text-news">Significant progress in autonomous driving technology is being made, with companies testing advanced self-driving
+                systems, bringing us closer to a future of fully autonomous vehicles.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3 mb-sm-0">
+            <div class="card" style="width: 18rem; height: 29rem;">
+              <img src="images/news-3.png" style="height: 14.25rem;;" class="card-img-top" alt="new">
+              <div class="card-body">
+                <h5 class="card-title">Supply Chain Challenges Impact Car Production</h5>
+                <p class="card-text-news">The global automotive industry faces challenges due to supply chain disruptions, affecting the production of various car
+                models and leading to increased wait times for customers.</p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="countainer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1312.4986356088834!2d2.2931616503179484!3d48.8582624253775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ff8a492bf91%3A0x6cd103e409ebbb00!2sLa%20Bulle%20Parisienne!5e0!3m2!1sfr!2sma!4v1698848425734!5m2!1sfr!2sma"
+          width="90%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="./images/logofooter.png" class="img-fluid" alt="logo" /></a>
+              </div>
+              <div class="footer-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
+                  sed do eiusmod tempor incididuntut consec tetur adipisicing
+                  elit,Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>
+                  Don’t miss to subscribe to our new feeds, kindly fill the
+                  form below.
+                </p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address" />
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
