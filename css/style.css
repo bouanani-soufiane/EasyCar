@@ -219,6 +219,7 @@ ul {
   height: auto;
   background-image: url(../images/contact-section-bg.jpg);
   background-size: cover;
+  background-position: 3%;
 }
 
 .contact-title {
@@ -252,7 +253,6 @@ ul {
 .form-container form input {
   background-color: transparent;
   border-radius: 0;
-  border-color: var(--clr-blue);
 }
 
 .form-container form input.message-input {
