@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --clr-blue: #026dfe;
+  --clr-gris: #3b3a3a;
+  --clr-gris-fonce: #141414;
+  --clr-black: #000;
+
+  --ff-primary: "Poppins", sans-serif;
+
+  --fs-300: 0.8125rem;
+  /*13px*/
+  --fs-400: 0.875rem;
+  /*14px*/
+  --fs-500: 0.9375rem;
+  /*15px*/
+  --fs-600: 1rem;
+  /*16px*/
+  --fs-700: 1.875rem;
+  /*30px*/
+  --fs-800: 2.5rem;
+  /*40px*/
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.main-contact-section {
+  background-color: var(--clr-gris-fonce);
+}
+
+.submit-btn{
+  background-color: transparent;
+  color: #808080;
+}
+
+.submit-btn:hover{
+  background-color: var(--clr-blue);
+  color: white;
+}
+
+.form-container form input {
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+}
+
+.form-container form input:focus {
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: var(--clr-blue);
+  color: white;
+}
+
+.form-container form input::placeholder {
+  color: grey
+}
+
+.error_para{
+  display: none;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 390px) {
+
+  .contact-info-icons {
+    height: 1.5em;
+  }
+
+}
