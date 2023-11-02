@@ -64,6 +64,14 @@ body {
 
 @media screen and (max-width: 390px) {
 
+  .contact-header {
+    height: auto;
+    width: 100vw;
+    background-image: url(../images/contact-section-bg.jpg);
+    background-size: cover;
+    background-position: 3%;
+  }  
+
   .contact-info-icons {
     height: 1.5em;
   }

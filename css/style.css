@@ -86,7 +86,7 @@ ul {
 }
 
 .footer-section {
-  background: #151414;
+  background: var(--clr-black);
   position: relative;
 }
 
