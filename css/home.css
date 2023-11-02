@@ -1,0 +1,138 @@
+.overlay {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.first-section {
+    position: relative;
+    background-color: #141414;
+    background-image: url(../images/ismail/Carouselle\ 1.png);
+    background-size: cover;
+    background-position: center;
+    animation: carousel 10s linear infinite;
+}
+
+@keyframes carousel {
+    0% {
+        background-image: url(../images/ismail/Carouselle\ 1.png);
+    }
+
+    30% {
+        background-image: url(../images/ismail/Carouselle\ 2.jpg);
+    }
+
+    70% {
+        background-image: url(../images/ismail/Carouselle\ 3.jpg);
+    }
+
+    100% {
+        background-image: url(../images/ismail/Carouselle\ 4.jpg);
+    }
+}
+
+.home-description {
+    padding: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-description p {
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: var(--fs-700);
+    font-family: var(--ff-primary);
+}
+
+.home-buttons {
+    padding: 4em 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-buttons button {
+    width: 10rem;
+    height: 2em;
+    background-color: var(--clr-blue);
+    font-size: var(--fs-600);
+    font-family: var(--ff-primary-bold);
+    text-transform: uppercase;
+    color: #fff;
+    border-style: none;
+}
+
+.home-buttons button:hover {
+    background-color: white;
+    color: var(--clr-blue);
+}
+
+section {
+    background-color: #141414;
+}
+
+.services-title {
+    font-size: var(--fs-800);
+    font-family: var(--ff-primary);
+    color: #026DFE;
+}
+
+.my-5{
+    margin-left: 2em;
+}
+
+.card {
+    box-shadow: 2px 2px 200px 0px rgba(2, 109, 254, 0.29);
+}
+
+.category-title {
+    font-size: var(--fs-800);
+    font-family: var(--ff-primary);
+    color: #026DFE;
+}
+
+.sous-category {
+    font-size: var(--fs-800);
+    font-family: var(--ff-primary);
+    color: #026DFE;
+    text-align: start;
+    padding-left: 3em;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-text-news {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.category {
+    font-size: var(--fs-800);
+    font-family: var(--ff-primary);
+    color: #026DFE;
+}
+
+.card-title-category {
+    padding-top: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-size: var(--fs-700);
+}
+
+
+.countainer-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

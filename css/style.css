@@ -174,17 +174,18 @@ ul {
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* about page page */
+
 body,
 html {
   overflow-x: hidden;
 }
 
-.about-first-page {
-  width: 100vw;
-  height: 100vh;
-}
+
+
+
 
 .about-first-page {
+
 
   background-image: url(../images/aboutfirst-pic.jpg);
   width: 100%;
@@ -192,13 +193,15 @@ html {
   background-position: bottom;
   background-position: center;
 
+  background-image: url(../images/aboutfirst-pic.jpg);
+
+  background-size: cover;
+  background-position: bottom;
 }
 
 .about-first-page h1 {
+
   display: inline;
-  font-size: var(--fs-200);
-  line-height: 50vh;
-  font-size: var(--fs-700);
 }
 
 .about-first-page h2 {
@@ -212,6 +215,7 @@ html {
   background-color: #00000095;
   color: white
 }
+
 
 .who-are-we {
   width: 100vw;
@@ -358,6 +362,7 @@ html {
 
 
 
+
 /* end about page */
 
 /* -------------------------------------------------------------------------------------------------------- */
@@ -368,54 +373,56 @@ html {
 /* -------------------------------------------------------------------------------------------------------- */
 
 /* contact us page page */
-.contact-header{
+.contact-header {
   height: auto;
   background-image: url(../images/contact-section-bg.jpg);
   background-size: cover;
+  background-position: 3%;
 }
 
-.contact-title{
+.contact-title {
   color: white;
   font-weight: 500;
 }
 
-.hero-section{
+.hero-section {
   height: 85vh;
 }
 
-.main-contact-section{
+.main-contact-section {
   height: auto;
   background-color: var(--clr-gris);
   color: white;
 }
 
-.info-para{
+.info-para {
   color: #808080;
   text-transform: capitalize;
 }
 
-.contact-info-icons{
+.contact-info-icons {
   fill: var(--clr-blue);
 }
 
-.follow-icons{
+.follow-icons {
   fill: white;
 }
 
-.form-container form input{
+.form-container form input {
   background-color: transparent;
   border-radius: 0;
-  border-color: var(--clr-blue);
 }
 
-.form-container form input.message-input{
+.form-container form input.message-input {
   height: 30vh;
 }
 
 @media screen and (max-width: 390px) {
-  .hero-section{
+  .hero-section {
     height: 45vh;
   }
+}
+
 /* reservation page page */
 header.reservation-header {
   background-image: url("../images/reservation-bg.png");
@@ -532,3 +539,64 @@ main.reservation .card-body i {
 }
 
 /* end reservation page */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000e3;
+}
+
+.modal-content {
+
+  width: 50vw;
+  background-color: #fcfcfc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.modal-footer {
+  margin-top: 20px;
+}
+
+#popupImage {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
