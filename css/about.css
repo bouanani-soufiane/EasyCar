@@ -11,28 +11,15 @@
 
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .additional-services {
-      min-height: 210vh;
+      min-height: 180vh;
     }
-  }
-  p{
-    font-size:large;
-  }
-/* p {
+  } */
+p {
     line-height: 3em;
     font-size: clamp(20px, 4em, 25px);
-} */
+}
 .blocktext-why-choose-us h1{
     line-height: 10%;
-}
-.container-additional-services img{
-    height: 90%;
-    width: 80%;
-}
-.container-additional-services{
-    height: 100%;
-}
-.vehicle-rental{
-    font-size:2vw;
 }
