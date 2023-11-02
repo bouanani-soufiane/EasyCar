@@ -253,6 +253,7 @@ ul {
 .form-container form input {
   background-color: transparent;
   border-radius: 0;
+  color: white;
 }
 
 .form-container form input.message-input {
