@@ -50,6 +50,7 @@ body {
   background-color: transparent;
   border-radius: 5px;
   border-color: var(--clr-blue);
+  color: white;
 }
 
 .form-container form input::placeholder {
