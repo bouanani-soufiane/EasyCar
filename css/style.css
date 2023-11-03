@@ -601,9 +601,10 @@ button {
   margin: 0 10px;
 }
 
-<<<<<<< HEAD
 .pagination li a{
   cursor: pointer;
 }
-=======
->>>>>>> 1a9c1012449245cfb8560cef05027012b6c200bc
+.pagination li a:hover{
+  background-color: #026dfe;
+  color: #fff;
+}

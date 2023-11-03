@@ -95,7 +95,7 @@
       </div>
 
       <!-- Add a modal container that will be hidden by default -->
-      <div id="myModal" class="modal">
+      <div id="myModal" class="modal" id="modal">
         <div class="modal-content">
           <div class="modal-header">
             <h2 id="popupTitle"></h2>
@@ -128,21 +128,15 @@
         </div>
       </div>
 
+      <div class="container row mx-auto d-flex justify-content-center " id="cards" style="display: none;"></div>
 
-      <div class="row container mx-auto gap-3" id="list-cards">
-
-
-
-        <div class="container row mx-auto d-flex justify-content-center " id="cards" style="display: none;">
-
-        </div>
-        <naxv aria-label="pagination text-center d-flex justify-content-center">
-          <ul class="pagination justify-content-center">
-            <li class="page-item active" id="one"><a class="page-link">1</a></li>
-            <li class="page-item"><a class="page-link" id="two">2</a></li>
-            <li class="page-item"><a class="page-link" id="three">3</a></li>
-          </ul>
-        </naxv>
+      <naxv aria-label="pagination text-center d-flex justify-content-center">
+        <ul class="pagination justify-content-center">
+          <li class="page-item" id="one"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link" id="two">2</a></li>
+          <li class="page-item"><a class="page-link" id="three">3</a></li>
+        </ul>
+      </naxv>
       </div>
     </section>
   </main>
