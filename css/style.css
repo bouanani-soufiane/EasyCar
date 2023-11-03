@@ -86,7 +86,7 @@ ul {
 }
 
 .footer-section {
-  background: #151414;
+  background: var(--clr-black);
   position: relative;
 }
 
@@ -404,6 +404,7 @@ html {
 .form-container form input {
   background-color: transparent;
   border-radius: 0;
+  color: white;
 }
 
 .form-container form input.message-input {
@@ -591,4 +592,8 @@ ul li {
 button {
   padding: 10px 20px;
   margin: 0 10px;
+}
+
+.pagination li a{
+  cursor: pointer;
 }

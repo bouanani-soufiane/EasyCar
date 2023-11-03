@@ -20,8 +20,8 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const NameCheck = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
   const EmailCheck = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
-  const cinCheck = /^[A-Za-z]{1,2}\d{5,6}$/;
-  const phoneNumCheck = /^0\d{9}$/;
+  const cinCheck = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
+  const phoneNumCheck = /^.{1,499}$/;
   if(NameCheck.test(FirstName.value) && NameCheck.test(LastName.value) && EmailCheck.test(email.value) && cinCheck.test(subject.value) && phoneNumCheck.test(message.value)){
     form.submit();
   }
@@ -63,7 +63,7 @@ email.addEventListener('input', function(e) {
 
   if(!valid){
     EmailInputHelp.style.display = 'block'
-    email.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
+    email.className = "form-control mx-2 border-danger border-2 border-bottom border-0"
   } else {
     EmailInputHelp.style.display = 'none'
     email.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
@@ -75,13 +75,13 @@ email.addEventListener('input', function(e) {
 // subject error message 
 
 subject.addEventListener('input', function(e) {
-  const cinCheck = /^[A-Za-z]{1,2}\d{5,6}$/;
+  const cinCheck = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
   var currentValue = e.target.value;
   var valid = cinCheck.test(currentValue);
 
   if(!valid){
     SubjectInputHelp.style.display = 'block'
-    subject.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
+    subject.className = "form-control mx-2 border-danger border-2 border-bottom border-0"
   } else {
     SubjectInputHelp.style.display = 'none'
     subject.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
@@ -92,13 +92,13 @@ subject.addEventListener('input', function(e) {
 // message error message 
 
 message.addEventListener('input', function(e) {
-  const phoneNumCheck = /^0\d{9}$/;
+  const phoneNumCheck = /^.{1,499}$/;
   var currentValue = e.target.value;
   var valid = phoneNumCheck.test(currentValue);
 
   if(!valid){
     MessageInputHelp.style.display = 'block'
-    message.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
+    message.className = "form-control mx-2 border-danger border-2 border-bottom border-0"
   } else {
     MessageInputHelp.style.display = 'none'
     message.className = "form-control mx-2 border-primary border-2 border-bottom border-0"
