@@ -1,0 +1,72 @@
+body,
+html {
+    overflow-x: hidden;
+}
+
+header h2 {
+    font-size: small;
+}
+
+.devis-header {
+    margin-top: 0;
+    height: 10vh;
+    width: 100vw;
+}
+
+/* .devis-header span {
+color: blue
+} */
+.devis-header img {
+
+    height: ;
+    border-radius: 40%;
+    background-color: black;
+    width: 15%;
+    float: right;
+}
+
+main {
+    height: auto;
+}
+
+main h1 {
+    font-weight: 700;
+}
+
+main h2 {
+    font-weight: 600;
+
+    font-size: small;
+}
+
+.date {
+    font-weight: 700;
+}
+
+.client {
+    font-weight: 700;
+}
+
+.reference {
+    font-weight: 700;
+}
+
+.order-num {
+    font-weight: 700;
+}
+
+.table {
+    width: 80%;
+}
+
+
+.TVA {
+    float: right;
+}
+
+.prix-total {
+    color: blue;
+    font-size: xx-large;
+    font-weight: 700;
+    float: right;
+}
