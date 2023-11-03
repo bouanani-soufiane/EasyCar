@@ -149,14 +149,24 @@ const dataobj = [
     page: 3,
   },
 ];
+// Get the popup title, image, and option list elements
+var popupTitle = document.getElementById("popupTitle");
+var popupPrice = document.getElementById("popupPrice");
+var popupImage = document.getElementById("popupImage");
+var optionList = document.getElementById("optionList");
+let cardTitle;
+let cardPrice;
+let cardImage;
+let cardOptions;
+var modal = document.getElementById("myModal");
+var closeBtn = document.getElementsByClassName("close")[0];
 
 localStorage.setItem("dataobj", JSON.stringify(dataobj));
-
 const retrievedData = JSON.parse(localStorage.getItem("dataobj"));
 
-console.log(retrievedData);
+console.log(retrievedData[0]);
 
-document.addEventListener("DOMContentLoaded", function () {
+function pagination() {
   const boxes = document.querySelectorAll(".filter");
   const one = document.getElementById("one");
   const two = document.getElementById("two");
@@ -200,12 +210,10 @@ document.addEventListener("DOMContentLoaded", function () {
       showPage(currentPage);
     }
   });
-});
+}
 
-let list = document.getElementById("card-list");
-list.addEventListener("click", function () {
+function listCards() {
   var cards = document.getElementById("cards");
-  cards.innerHTML = "";
   cards.classList.add("gap-5");
   for (const item of dataobj) {
     console.log(item);
@@ -213,7 +221,7 @@ list.addEventListener("click", function () {
   <div class="mb-3">
     <div class="g-0 d-flex justify-content-between">
       <div class="col-md-3">
-        <img src="${item.img}" class="img-fluid pt-4" alt="img" />
+        <img src="${item.img}" class="img-fluid pt-4" alt="img"  id="img-toggle" />
       </div>
       <div class="col-md-5">
         <div class="card-body">
@@ -230,7 +238,7 @@ list.addEventListener("click", function () {
           <h5 class="price pb-5 text-end">$/${item.price}<span class="lead">jrs</span></h5>
         </div>
         <div class="col-12">
-          <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2">Ajouter</a>
+          <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button">Ajouter</a>
         </div>
       </div>
     </div>
@@ -239,6 +247,14 @@ list.addEventListener("click", function () {
 `;
     cards.insertAdjacentHTML("afterbegin", html);
   }
+}
+
+let list = document.getElementById("card-list");
+list.addEventListener("click", function () {
+  cards.innerHTML = "";
+  listCards();
+  filterCards();
+  pagination();
 });
 
 function gridCard() {
@@ -253,7 +269,7 @@ function gridCard() {
             <p class="card-text lead text-start px-2 h6 text-secondary">
                ${item.categorie}
             </p>
-            <img src="${item.img}" class="card-img-top rounded-0 p-3" alt="sport" />
+            <img src="${item.img}" class="card-img-top rounded-0 p-3" alt="sport" id="img-toggle" />
             <div class="card-body mt-3 mb-3">
                 <div class="row">
                     <div class="col-12">
@@ -273,7 +289,7 @@ function gridCard() {
                     <h5 class="price">$${item.price}/<span class="lead">jrs</span></h5>
                 </div>
                 <div class="col-8">
-                    <a class="btn btn-primary px-4 py-2 rounded-2 mb-2" id = "add">Ajouter</a>
+                  <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button">Ajouter</a>
                 </div>
             </div>
         </div>
@@ -281,65 +297,58 @@ function gridCard() {
     cards.insertAdjacentHTML("afterbegin", html);
   }
 }
-
+let grid = document.getElementById("card-grid");
+grid.addEventListener("click", function () {
+  cards.innerHTML = "";
+  gridCard();
+  filterCards();
+  pagination();
+});
 gridCard();
+filterCards();
+pagination();
 
-// Get the modal and close button elements
-var modal = document.getElementById("myModal");
-var closeBtn = document.getElementsByClassName("close")[0];
+// Event delegation to handle pop-up clicks
+document.getElementById("cards").addEventListener("click", function (e) {
+  console.log("test");
+  if (e.target.classList.contains("add-button")) {
+    var cardElement = e.target.closest(".card");
 
-// Get all the "Ajouter" buttons
-var addButtons = document.querySelectorAll(".btn.btn-primary");
-
-// Get the popup title, image, and option list elements
-var popupTitle = document.getElementById("popupTitle");
-var popupPrice = document.getElementById("popupPrice");
-var popupImage = document.getElementById("popupImage");
-var optionList = document.getElementById("optionList");
-let cardTitle;
-let cardPrice;
-let cardImage;
-let cardOptions;
-// Add event listeners to the "Ajouter" buttons
-addButtons.forEach(function (button, index) {
-  button.addEventListener("click", function (e) {
-    cardTitle =
-      this.parentElement.parentElement.parentElement.getElementsByClassName(
-        "card-title"
-      )[0].textContent;
-    cardPrice =
-      this.parentElement.parentElement.parentElement.getElementsByClassName(
-        "price"
-      )[0].textContent;
-    cardImage =
-      this.parentElement.parentElement.parentElement.getElementsByClassName(
-        "card-img-top"
-      )[0].src;
-    cardOptions =
-      this.parentElement.parentElement.parentElement.getElementsByClassName(
-        "card-text"
-      )[0].textContent;
+    cardTitle = cardElement.querySelector(".card-title").textContent;
+    cardPrice = cardElement.querySelector(".price").textContent;
+    cardImage = cardElement.querySelector("#img-toggle").src;
+    cardOptions = cardElement.querySelector(".card-text").textContent;
 
     popupTitle.innerText = cardTitle;
     popupPrice.innerText = cardPrice;
     popupImage.src = cardImage;
     optionList.innerHTML = cardOptions;
 
-    // Display the popup
     modal.style.display = "block";
-  });
+  }
 });
 
 // Close the popup when the close button is clicked
 closeBtn.onclick = function () {
   modal.style.display = "none";
 };
+var dataTable = [];
 var counter = 0;
+const dataObject = {};
 let personaliser = document.getElementById("personaliser");
 personaliser.addEventListener("click", () => {
-  let dataTable = [counter, cardTitle, cardPrice, cardImage, cardOptions];
+  var dataObject = {}; // Create a new object for each click
+
+  dataObject.id = counter;
+  dataObject.title = cardTitle;
+  dataObject.price = cardPrice;
+  dataObject.img = cardImage;
+  dataObject.categorie = cardOptions;
+
+  dataTable.push(dataObject);
+  console.log(`HERE IS ${JSON.stringify(dataTable)}`);
   localStorage.setItem("car-personalization", JSON.stringify(dataTable));
-  console.log(dataTable);
+  console.log(localStorage.getItem("car-personalization"));
   counter++;
 });
 
@@ -351,19 +360,20 @@ window.onclick = function (event) {
 };
 // filter menu
 
-var filterButtons = document.querySelectorAll(".filter-button");
-var filters = document.querySelectorAll(".filter");
+function filterCards() {
+  var filterButtons = document.querySelectorAll(".filter-button");
+  var filters = document.querySelectorAll(".filter");
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var value = this.getAttribute("data-filter");
 
-filterButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var value = this.getAttribute("data-filter");
-
-    filters.forEach(function (filter) {
-      if (!filter.classList.contains(value)) {
-        filter.style.display = "none";
-      } else {
-        filter.style.display = "block";
-      }
+      filters.forEach(function (filter) {
+        if (!filter.classList.contains(value)) {
+          filter.style.display = "none";
+        } else {
+          filter.style.display = "block";
+        }
+      });
     });
   });
-});
+}
