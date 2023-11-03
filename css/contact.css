@@ -70,7 +70,6 @@ body {
 
   .contact-header {
     height: auto;
-    width: 100vw;
     background-image: url(../images/contact-section-bg.jpg);
     background-size: cover;
     background-position: 3%;
