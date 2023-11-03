@@ -62,6 +62,10 @@ body {
   margin-left: 0.5rem;
 }
 
+.follow-icons:hover {
+  fill: var(--clr-blue);
+}
+
 @media screen and (max-width: 390px) {
 
   .contact-header {
@@ -74,6 +78,10 @@ body {
 
   .contact-info-icons {
     height: 1.5em;
+  }
+
+  .form-container form input {
+    width: 73%;
   }
 
 }
