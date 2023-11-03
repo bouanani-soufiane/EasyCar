@@ -581,6 +581,8 @@ main.reservation .card-body i {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
@@ -591,7 +593,7 @@ ul li {
 
 button {
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .pagination li a{
