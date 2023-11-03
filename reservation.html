@@ -1,977 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>reservation</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" href="./images/logofooter.png" />
-  </head>
-  <body>
-    <header class="reservation-header">
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand d-md-none" href="#">
-            <img src="./images/logo.png" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item mx-3">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./about-us.html">About Us</a>
-              </li>
-              <a class="navbar-brand d-none d-md-block mx-5" href="#">
-                <img src="./images/logo.png" alt="logo" />
-              </a>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./reservation.html">Reservation</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link" href="./contact-us.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div
-        class="d-flex align-items-center justify-content-center heading"
-        style="height: 100vh"
-      >
-        <div class="text-center">
-          <div class="text-center">HOME / RESERVATION</div>
-          <h1 class="text-center">RESERVATION</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./images/logofooter.png" />
+</head>
+
+<body>
+  <header class="reservation-header">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-md-none" href="#">
+          <img src="./images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./about-us.html">About Us</a>
+            </li>
+            <a class="navbar-brand d-none d-md-block mx-5" href="#">
+              <img src="./images/logo.png" alt="logo" />
+            </a>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./contact-us.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
-    <main class="reservation">
-      <section class="check-in py-5 text-white text-center bg-dark">
-        <div class="container">
-          <h2 class="mb-5">We offer many different car rental options</h2>
-          <h3 class="text-start mb-3 h6">
-            Find a car to your liking for the next trip
-          </h3>
-          <div class="mb-5 row">
-            <div class="col-md-10 col-sm-7 input-box">
-              <input type="text" class="form-control" placeholder="search..." />
-              <i class="fa fa-search"></i>
-            </div>
-            <div class="col-md-1 col-sm-1">
-              <div class="row">
-                <div class="col-6 my-2">
-                  <i class="fa-solid fa-bars | toggler"></i>
-                </div>
-                <div class="col-6 my-2">
-                  <i class="fa-solid fa-border-all | toggler"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-              <div id="filters" class="button-group">
-    
-                  <span class="h4">categories</span>
-        
-                  <button class="btn px-5 filter-button btn-primary" data-filter="sport">sport</button>
-                  <button class="btn px-5 filter-button btn-primary" data-filter="suv">suv</button>
-                  <button class="btn px-5 filter-button btn-primary" data-filter="sedan">sedan</button>
-              </div>
-          </div>
+    </nav>
+    <div class="d-flex align-items-center justify-content-center heading" style="height: 100vh">
+      <div class="text-center">
+        <div class="text-center">HOME / RESERVATION</div>
+        <h1 class="text-center">RESERVATION</h1>
       </div>
-  
-          
-          <br />
-          <div class=" container row mx-auto d-flex align-items-center">
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Acura NSX</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport3.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$69/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Audi R8</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport1.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$76/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Alfa Romeo 4C</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport2.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$54/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">rolls royce</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$65/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan1.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$76/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan2.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$54/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv1.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$67/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv2.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$89/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv3.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$88/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Lotus Evora</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport4.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$94/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan3.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$83/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan2.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$102/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan3.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$92/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sedan">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sedan
-                </p>
-                <img
-                  src="./images/car-sedan1.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$79/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sport">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Aston Martin</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  sport
-                </p>
-                <img
-                  src="./images/car-sport5.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$89/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv4.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$90/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv5.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$69/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter suv">
-              <div
-                class="card border-0 rounded-0 shadow py-3 rounded-3"
-                style="width: 18rem"
-              >
-                <h5 class="card-title text-start px-2 my-0">Koenigsegg</h5>
-                <p class="card-text lead text-start px-2 h6 text-secondary">
-                  Suv
-                </p>
-                <img
-                  src="./images/car-suv6.png"
-                  class="card-img-top rounded-0 p-3"
-                  alt="sport"
-                />
-                <div class="card-body mt-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="card-text text-secondary">
-                        <i class="fa-solid fa-gas-pump mx-2 h5"></i
-                        ><span class="">90L</span>
-                        <i class="fa-solid fa-circle-radiation mx-1 h5"></i
-                        ><span class="">Manuel</span>
-                        <i class="fa-solid fa-user-group mx-1 h5"></i
-                        ><span class="">2 Persons</span>
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <i class="bi bi-bookmark-plus fs-2"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center text-center g-0">
-                  <div class="col-4">
-                    <h5 class="">$99/<span class="lead">jrs</span></h5>
-                  </div>
-                  <div class="col-8">
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-2 mb-2"
-                      >Ajouter</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer-section">
+    </div>
+  </header>
+  <main class="reservation">
+    <section class="check-in py-5 text-white text-center bg-dark">
       <div class="container">
-        <div class="footer-content pt-5 pb-5">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 mb-50">
-              <div class="footer-widget">
-                <div class="footer-logo">
-                  <a href="index.html"
-                    ><img
-                      src="./images/logofooter.png"
-                      class="img-fluid"
-                      alt="logo"
-                  /></a>
-                </div>
-                <div class="footer-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
-                    sed do eiusmod tempor incididuntut consec tetur adipisicing
-                    elit,Lorem ipsum dolor sit amet.
-                  </p>
-                </div>
+        <h2 class="mb-5">We offer many different car rental options</h2>
+        <h3 class="text-start mb-3 h6">
+          Find a car to your liking for the next trip
+        </h3>
+        <div class="mb-5 row">
+          <div class="col-md-10 col-sm-7 input-box">
+            <input type="text" class="form-control" placeholder="search..." />
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="col-md-1 col-sm-1">
+            <div class="row">
+              <div class="col-6 my-2" id="card-list">
+                <i class="fa-solid fa-bars | toggler"></i>
               </div>
+              <div class="col-6 my-2" id="card-grid">
+                <i class="fa-solid fa-border-all | toggler"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="filters" class="button-group">
+
+            <span class="h4">categories</span>
+
+            <button class="btn px-5 filter-button btn-primary" data-filter="sport">sport</button>
+            <button class="btn px-5 filter-button btn-primary" data-filter="suv">suv</button>
+            <button class="btn px-5 filter-button btn-primary" data-filter="sedan">sedan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add a modal container that will be hidden by default -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="popupTitle"></h2>
+            <span id="optionList"></span>
+            <span id="popupPrice"></span>
+            <span class="close">x</span>
+          </div>
+          <div class="modal-body">
+            <img id="popupImage" src="" alt="" class="my-3">
+            <div class="col-12 my-3">
+              <p class="card-text text-secondary">
+                <i class="fa-solid fa-gas-pump mx-2 h5"></i><span class="">90L</span>
+                <i class="fa-solid fa-circle-radiation mx-1 h5"></i><span class="">Manuel</span>
+                <i class="fa-solid fa-user-group mx-1 h5"></i><span class="">2 Persons</span>
+              </p>
+            </div>
+            <div class="col-12 flex-column align-items-start">
+              <p><i class="fa-solid fa-circle-check"></i> toit panoramique</p>
+              <p><i class="fa-solid fa-circle-check"></i> écrans tactiles</p>
+              <p><i class="fa-solid fa-circle-check"></i> vitres électriques</p>
+              <p><i class="fa-solid fa-circle-check"></i> Système audio haut de gamme</p>
             </div>
 
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Useful Links</h3>
-                </div>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">services</a></li>
-                </ul>
+          </div>
+          <div class="modal-footer">
+
+            <button id="personaliser" class="btn btn-primary">personaliser</button>
+            <button id="submitBtn" class="btn btn-primary">valider</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row container mx-auto gap-3" id="list-cards">
+
+
+
+        <div class="container row mx-auto d-flex justify-content-center " id="cards" style="display: none;">
+
+        </div>
+        <naxv aria-label="pagination text-center d-flex justify-content-center">
+          <ul class="pagination justify-content-center">
+            <li class="page-item active" id="one"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link" id="two">2</a></li>
+            <li class="page-item"><a class="page-link" id="three">3</a></li>
+          </ul>
+        </naxv>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="./images/logofooter.png" class="img-fluid" alt="logo" /></a>
+              </div>
+              <div class="footer-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
+                  sed do eiusmod tempor incididuntut consec tetur adipisicing
+                  elit,Lorem ipsum dolor sit amet.
+                </p>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Subscribe</h3>
-                </div>
-                <div class="footer-text mb-25">
-                  <p>
-                    Don’t miss to subscribe to our new feeds, kindly fill the
-                    form below.
-                  </p>
-                </div>
-                <div class="subscribe-form">
-                  <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="fab fa-telegram-plane"></i></button>
-                  </form>
-                </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>
+                  Don’t miss to subscribe to our new feeds, kindly fill the
+                  form below.
+                </p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address" />
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/index.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
