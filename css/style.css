@@ -185,22 +185,15 @@ html {
 
 
 .about-first-page {
-
-
   background-image: url(../images/aboutfirst-pic.jpg);
-  width: 100%;
-  background-size: cover;
-  background-position: bottom;
-  background-position: center;
-
-  background-image: url(../images/aboutfirst-pic.jpg);
-
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: bottom;
 }
 
 .about-first-page h1 {
-
+  line-height: 50vh;
   display: inline;
 }
 
@@ -219,7 +212,7 @@ html {
 
 .who-are-we {
   width: 100vw;
-  height: 100vh;
+  height:auto;
   background-color: white;
 }
 
@@ -255,7 +248,7 @@ html {
 
 .how-we-work {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 .how-we-work {
@@ -289,7 +282,7 @@ html {
 
 .our-services {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: white;
 
 }
@@ -313,7 +306,7 @@ html {
   color: white;
   background-image: url(../images/auto-commercial\ .png);
   /* filter: drop-shadow(5px 10px 5px #222); */
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -322,7 +315,7 @@ html {
 
 .overlay-why-choose-us {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #000000d4;
 }
 
@@ -333,7 +326,7 @@ html {
 .additional-services {
   background-color: white;
   width: 100vw;
-  height: 90vh;
+  height: auto;
 }
 
 .additional-services img {
@@ -588,6 +581,8 @@ main.reservation .card-body i {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
@@ -598,9 +593,13 @@ ul li {
 
 button {
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .pagination li a{
   cursor: pointer;
+}
+.pagination li a:hover{
+  background-color: #026dfe;
+  color: #fff;
 }
