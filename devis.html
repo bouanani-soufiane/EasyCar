@@ -28,137 +28,40 @@
     <main>
         <h1 class="mx-5">DEVIS</h1>
         <span>
-            <h2 class="mx-5 text-danger">Sent On xx/xx/xxxx</h2>
+            <h2 class="mx-5 text-danger">Sent On <span id="sentDate"></span></h2>
         </span>
-        <!-- <div class="container text-center my-5">
+        <div class="container my-4 ">
+            <div class="row">
+                <div class="client col">Client</div>
+                <div class="reference col">Reference</div>
+                <div class="w-100"></div>
+                <div class="col">ismail ouali</div>
+                <div class="col" id="reference"></div>
+            </div>
+        </div>
+
+        <div class="container my-2  ">
             <div class="row ">
-                <div class="col-sm-5 col-md-6 col-lg-1">Client <br> <span>XXX</span></div>
-                <div class="col-sm-5 offset-sm-2 col-md-6 col-lg-11 offset-md-0 my-3">Reference <br><span>XXXX</span>
-                </div>
+                <div class="order-num col">Order Num</div>
+                <div class="date col">Accession date</div>
+                <div class="w-100"></div>
+                <div class="col"> № <span id="orderNum"></span></div>
+                <div class="col" id="dateN"></div>
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-5  col-lg-2 ">Order Num<br><span>XXXX/XXXX</span></div>
-                <div class="col-sm-6 col-md-5 offset-lg-2 col-lg-11 offset-lg-0 my-4">Accession date
-                    <br><span>XX/XX/XXXX</span>
-                </div>
-            </div>
-        </div> -->
-        <div class="container my-5">
-            <div class="row">
-              <div class="client col">Client</div>
-              <div class="reference col">Reference</div>
-              <div class="w-100"></div>
-              <div class="col">xxxxxxx</div>
-              <div class="col">xxxxx</div>
-            </div>
-          </div>
 
-          <div class="container my-5">
-            <div class="row">
-              <div class="order-num col">Order Num</div>
-              <div class="date col">Accession date</div>
-              <div class="w-100"></div>
-              <div class="col">xxxxxxx</div>
-              <div class="col">xx/xx/xxx</div>
-            </div>
-          </div>
-          
-        <hr>
-        <table class="table table-striped mx-5 my-5">
-            <tr>
-                <th>Description</th>
-                <th>Unit Price</th>
-            </tr>
-            <tr>
-                <td>
-                    Car name
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    type de toit
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Vitres
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Ecrans
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Systeme d'audio
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Prix total
-                </td>
-                <td>XX$</td>
-            </tr>
+        </div>
 
+        <div class="container" id="dataTables">
 
-
-        </table>
-        <table class="table table-striped  my-5 mx-5">
-            <tr>
-                <th>Description</th>
-                <th>Unit Price</th>
-            </tr>
-            <tr>
-                <td>
-                    Car name
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    type de toit
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Vitres
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Ecrans
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Systeme d'audio
-                </td>
-                <td>XX$</td>
-            </tr>
-            <tr>
-                <td>
-                    Prix total
-                </td>
-                <td>XX$</td>
-            </tr>
-
-
-
-        </table>
-        <div class="prix-total mx-5 my-5">PRIX total</div>
-        <div class="TVA">TVA 20%:XXX$</div>
+        </div>
+        <div class="container">
+            <div class=" mx-5 mt-4 mb-2">TVA 20%</div>
+            <div class="prix-total mx-5 mt-1 mb-1">prix HT : <span id="priceHT"></span> $ </div>
+            <div class="prix-total mx-5 mt-1 mb-5">prix TTC : <span id="priceTTC"></span> $ </div>
+        </div>
 
     </main>
-
+    <script src="./js/devis.js"></script>
 </body>
 
 </html>
