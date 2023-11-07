@@ -1,155 +1,6 @@
-const dataobj = [
-  {
-    Id: 1,
-    title: "Acura NSX",
-    categorie: "sport",
-    img: "./images/car-sedan3.png",
-    price: "99.00",
-
-    page: 1,
-  },
-  {
-    Id: 2,
-    title: "BMW X5",
-    categorie: "suv",
-    img: "./images/car-sedan2.png",
-    price: "89.00",
-
-    page: 1,
-  },
-  {
-    Id: 3,
-    title: "Toyota Camry",
-    categorie: "sedan",
-    img: "./images/car-sedan1.png",
-    price: "79.00",
-
-    page: 1,
-  },
-  {
-    Id: 4,
-    title: "Porsche 911",
-    categorie: "sport",
-    img: "./images/car-sport2.png",
-    price: "109.00",
-    page: 1,
-  },
-  {
-    Id: 5,
-    title: "Jeep Wrangler",
-    categorie: "suv",
-    img: "./images/car-suv2.png",
-    price: "79.00",
-
-    page: 1,
-  },
-  {
-    Id: 6,
-    title: "Honda Accord",
-    categorie: "sedan",
-    img: "./images/car-sedan2.png",
-    price: "69.00",
-
-    page: 1,
-  },
-  {
-    Id: 7,
-    title: "Ford Mustang",
-    categorie: "sport",
-    img: "./images/car-sport3.png",
-    price: "89.00",
-    page: 2,
-  },
-  {
-    Id: 8,
-    title: "Tesla Model X",
-    categorie: "suv",
-    img: "./images/car-suv3.png",
-    price: "109.00",
-    page: 2,
-  },
-  {
-    Id: 9,
-    title: "Nissan Altima",
-    categorie: "sedan",
-    img: "./images/car-sedan3.png",
-    price: "79.00",
-    page: 2,
-  },
-  {
-    Id: 10,
-    title: "Acura NSX",
-    categorie: "sport",
-    img: "./images/car-sport1.png",
-    price: "99.00",
-    page: 2,
-  },
-  {
-    Id: 11,
-    title: "BMW X5",
-    categorie: "suv",
-    img: "./images/car-suv1.png",
-    price: "89.00",
-    page: 2,
-  },
-  {
-    Id: 12,
-    title: "Toyota Camry",
-    categorie: "sedan",
-    img: "./images/car-sedan1.png",
-    price: "79.00",
-    page: 2,
-  },
-  {
-    Id: 13,
-    title: "Porsche 911",
-    categorie: "sport",
-    img: "./images/car-sport2.png",
-    price: "109.00",
-    page: 3,
-  },
-  {
-    Id: 14,
-    title: "Jeep Wrangler",
-    categorie: "suv",
-    img: "./images/car-suv2.png",
-    price: "79.00",
-    page: 3,
-  },
-  {
-    Id: 15,
-    title: "Honda Accord",
-    categorie: "sedan",
-    img: "./images/car-sedan2.png",
-    price: "69.00",
-    page: 3,
-  },
-  {
-    Id: 16,
-    title: "Ford Mustang",
-    categorie: "sport",
-    img: "./images/car-sport3.png",
-    price: "89.00",
-    page: 3,
-  },
-  {
-    Id: 17,
-    title: "Tesla Model X",
-    categorie: "suv",
-    img: "./images/car-suv3.png",
-    price: "109.00",
-    page: 3,
-  },
-  {
-    Id: 18,
-    title: "Nissan Altima",
-    categorie: "sedan",
-    img: "./images/car-sedan3.png",
-    price: "79.00",
-    page: 3,
-  },
-];
 // Get the popup title, image, and option list elements
+import { dataobj } from "./data.js";
+console.log(dataobj);
 var popupTitle = document.getElementById("popupTitle");
 var popupPrice = document.getElementById("popupPrice");
 var popupImage = document.getElementById("popupImage");
@@ -160,11 +11,6 @@ let cardImage;
 let cardOptions;
 var modal = document.getElementById("myModal");
 var closeBtn = document.getElementsByClassName("close")[0];
-
-localStorage.setItem("dataobj", JSON.stringify(dataobj));
-const retrievedData = JSON.parse(localStorage.getItem("dataobj"));
-
-console.log(retrievedData[0]);
 
 function pagination() {
   const boxes = document.querySelectorAll(".filter");
@@ -211,12 +57,13 @@ function pagination() {
     }
   });
 }
-
+// const retrievedData = JSON.parse(localStorage.getItem("dataobj"));
+// console.log(`hi ${dataobj}`);
 function listCards() {
   var cards = document.getElementById("cards");
   cards.classList.add("gap-5");
   for (const item of dataobj) {
-    console.log(item);
+    // console.log(item);
     const html = `<div class="card col-sm-12 w-100 filter ${item.categorie}" data-page="${item.page}">
   <div class="mb-3">
     <div class="g-0 d-flex justify-content-between">
@@ -238,7 +85,7 @@ function listCards() {
           <h5 class="price pb-5 text-end">$/${item.price}<span class="lead">jrs</span></h5>
         </div>
         <div class="col-12">
-          <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button">Ajouter</a>
+          <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button" data-index="${item.Id}" id='ajouter'>Ajouter</a>
         </div>
       </div>
     </div>
@@ -255,6 +102,8 @@ list.addEventListener("click", function () {
   listCards();
   filterCards();
   pagination();
+  addToPanier();
+  addToLocal();
 });
 
 function gridCard() {
@@ -262,7 +111,7 @@ function gridCard() {
   cards.innerHTML = "";
   cards.classList.remove("gap-5");
   for (const item of dataobj) {
-    console.log(item);
+    // console.log(item);
     const html = `<div class="my-5 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ${item.categorie}" data-page="${item.page}">
         <div class="card border-0 rounded-0 shadow py-3 rounded-3">
             <h5 class="card-title text-start px-2 my-0">${item.title}</h5>
@@ -289,7 +138,7 @@ function gridCard() {
                     <h5 class="price">$${item.price}/<span class="lead">jrs</span></h5>
                 </div>
                 <div class="col-8">
-                  <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button">Ajouter</a>
+                  <a class="btn btn-primary px-4 py-2 rounded-2 mb-2 add-button" data-index="${item.Id}" id='ajouter'>Ajouter</a>
                 </div>
             </div>
         </div>
@@ -303,6 +152,8 @@ grid.addEventListener("click", function () {
   gridCard();
   filterCards();
   pagination();
+  addToPanier();
+  addToLocal();
 });
 gridCard();
 filterCards();
@@ -310,8 +161,9 @@ pagination();
 
 // Event delegation to handle pop-up clicks
 document.getElementById("cards").addEventListener("click", function (e) {
-  console.log("test");
+  // console.log("test");
   if (e.target.classList.contains("add-button")) {
+    // addToCart(e);
     var cardElement = e.target.closest(".card");
 
     cardTitle = cardElement.querySelector(".card-title").textContent;
@@ -332,25 +184,6 @@ document.getElementById("cards").addEventListener("click", function (e) {
 closeBtn.onclick = function () {
   modal.style.display = "none";
 };
-var dataTable = [];
-var counter = 0;
-const dataObject = {};
-let personaliser = document.getElementById("personaliser");
-personaliser.addEventListener("click", () => {
-  var dataObject = {}; // Create a new object for each click
-
-  dataObject.id = counter;
-  dataObject.title = cardTitle;
-  dataObject.price = cardPrice;
-  dataObject.img = cardImage;
-  dataObject.categorie = cardOptions;
-
-  dataTable.push(dataObject);
-  console.log(`HERE IS ${JSON.stringify(dataTable)}`);
-  localStorage.setItem("car-personalization", JSON.stringify(dataTable));
-  console.log(localStorage.getItem("car-personalization"));
-  counter++;
-});
 
 // Close the popup when the user clicks outside the modal
 window.onclick = function (event) {
@@ -377,3 +210,85 @@ function filterCards() {
     });
   });
 }
+
+var dataTable = [];
+
+var panierData = JSON.parse(localStorage.getItem("panier"));
+var counter = panierData ? panierData.length + 1 : 1;
+
+var ajouterBtn = document.querySelectorAll("#ajouter");
+function handleAjouterClick(btn) {
+  var dataIndex = btn.getAttribute("data-index");
+  var data = JSON.parse(localStorage.getItem("dataobj"));
+  var cardTitle = data[dataIndex - 1].title;
+  var cardPrice = data[dataIndex - 1].price;
+  var cardImage = data[dataIndex - 1].img;
+  var cardCateg = data[dataIndex - 1].categorie;
+  var isDuplicate = dataTable.some((item) => {
+    return item.title === cardTitle && item.price === cardPrice;
+  });
+
+  if (!isDuplicate) {
+    var dataObject = {};
+    dataObject.id = counter;
+    dataObject.title = cardTitle;
+    dataObject.price = cardPrice;
+    dataObject.img = cardImage;
+    dataObject.categorie = cardCateg;
+    dataTable.push(dataObject);
+    var panierData = JSON.parse(localStorage.getItem("panier")) || [];
+    panierData.push(dataObject);
+    localStorage.setItem("panier", JSON.stringify(panierData));
+    console.log(localStorage.getItem("panier"));
+    counter++;
+  } else {
+    console.log("Item already exists in the cart.");
+  }
+}
+function addToLocal() {
+  var ajouterBtn = document.querySelectorAll("#ajouter");
+
+  ajouterBtn.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      handleAjouterClick(btn);
+    });
+  });
+}
+addToLocal();
+var panier_items = document.getElementById("panier-items");
+
+function addToPanier() {
+  var data = JSON.parse(localStorage.getItem("panier"));
+  console.log("hyee" + JSON.stringify(data));
+  for (let item of data) {
+    const modalRent = `<li class="row d-flex justify-content-end  " style="width: 350px;">
+      <div class="col-4">
+        <img src="${item.img}" alt="img" class="img-fluid small-image ms-1">
+      </div>
+      <div class="col-4 text-white">
+        <h6 class= "">${item.title}</h6>
+        <span class="d-block h6">${item.categorie}</span>
+      </div>
+      <div class="col-4 d-flex justify-content-end"> 
+      <div >
+        <button class="btn btn-sm btn-success mb-3" type="button" id="personaliser" data-index="${item.id}" >personaliser</button> 
+        <button class="btn btn-sm btn-danger" type="button" id="supprimer" data-index="${item.id}">supprimer</button>
+      </div>
+      </div>
+    </li>
+    <hr class="custom-hr">
+`;
+    panier_items.insertAdjacentHTML("afterbegin", modalRent);
+  }
+}
+addToPanier();
+
+var personaliser = document.querySelectorAll("#personaliser");
+personaliser.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    console.log("im personaliser");
+    var dataIndex = e.target.getAttribute("data-index");
+    var otherPageUrl = `./personalisation.html?dataIndex=${dataIndex}`;
+    window.location.href = otherPageUrl;
+  });
+});
