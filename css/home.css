@@ -136,11 +136,4 @@ section {
         gap: 1em;
     }
 
-    .homebutton{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 13px;
-        font-family: 1;
-    }
 }

@@ -1,6 +1,6 @@
 var i = 0;
 var images = [];
-var slideTime = 5000; // 3 seconds
+var slideTime = 5000; 
 var carousel = document.getElementsByClassName('first-section')[0];
 
 images[0] = '../images/ismail/Carouselle1.png';
