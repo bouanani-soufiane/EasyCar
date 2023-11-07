@@ -33,16 +33,22 @@ roof.addEventListener("change", function () {
   if (roof.value == "Electric") {
     // Update the price in the local storage
     panierData[dataIndex - 1].price = oldPrice + 20;
+    panierData[dataIndex - 1].options.toit = "Electric";
+
     localStorage.setItem("panier", JSON.stringify(panierData));
     // Update the displayed price
     pricePersonalisation.textContent = `${oldPrice + 20} $`;
   } else if (roof.value == "Manual") {
     panierData[dataIndex - 1].price = updatedPrice + 10;
+    panierData[dataIndex - 1].options.toit = "Manual";
+
     localStorage.setItem("panier", JSON.stringify(panierData));
     // Update the displayed price
     pricePersonalisation.textContent = `${updatedPrice + 10} $`;
   } else if (roof.value == "Panoramic") {
     panierData[dataIndex - 1].price = oldPrice;
+    panierData[dataIndex - 1].options.toit = "Panoramic";
+
     localStorage.setItem("panier", JSON.stringify(panierData));
     // Update the displayed price
     pricePersonalisation.textContent = `${oldPrice} $`;
@@ -57,10 +63,13 @@ SelectAudio.addEventListener("change", function () {
 
   if (SelectAudio.value == "ATMOS") {
     updatedPrice += 20;
+    panierData[dataIndex - 1].options["Système audio"] = "ATMOS";
   } else if (SelectAudio.value == "Bose") {
     updatedPrice = oldPrice + 30;
-  } else if (SelectAudio.value == "Dolby" && oldPrice === updatedPrice) {
+    panierData[dataIndex - 1].options["Système audio"] = "Bose";
+  } else if (SelectAudio.value == "Dolby") {
     updatedPrice = oldPrice;
+    panierData[dataIndex - 1].options["Système audio"] = "Dolby";
   }
   // Update the price in the local storage
   panierData[dataIndex - 1].price = updatedPrice;
@@ -73,7 +82,26 @@ SelectAudio.addEventListener("change", function () {
 });
 
 SelectStation.addEventListener("change", function () {
+  if (SelectStation.value == "Radio") {
+    panierData[dataIndex - 1].options.Station = "Radio";
+  } else if (SelectStation.value == "CD") {
+    panierData[dataIndex - 1].options.Station = "CD";
+  } else if (SelectStation.value == "Ecran Tactile") {
+    panierData[dataIndex - 1].options.Station = "Ecran Tactile";
+  }
+  localStorage.setItem("panier", JSON.stringify(panierData));
+
   SelectStation.value == "Ecran Tactile"
     ? (station.innerHTML = `<p id="station"><i class="fa-solid fa-circle-check me-3"></i>  ${SelectStation.value}</p>`)
     : (station.innerHTML = `<p id="station"><i class="fa-solid fa-circle-check me-3"></i> Station ${SelectStation.value}</p>`);
+});
+
+
+var valider = document.querySelectorAll("#valider");
+valider.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    console.log("validated" + e);
+    var devisPag = `./devis.html?dataIndex=${dataIndex}`;
+    window.location.href = devisPag;
+  });
 });

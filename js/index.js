@@ -235,6 +235,12 @@ function handleAjouterClick(btn) {
     dataObject.price = cardPrice;
     dataObject.img = cardImage;
     dataObject.categorie = cardCateg;
+    dataObject.options = {
+      toit: "panoramique",
+      "Système audio": "Dolby",
+      Station: "Radio",
+    };
+
     dataTable.push(dataObject);
     var panierData = JSON.parse(localStorage.getItem("panier")) || [];
     panierData.push(dataObject);
@@ -291,4 +297,23 @@ personaliser.forEach((button) => {
     var otherPageUrl = `./personalisation.html?dataIndex=${dataIndex}`;
     window.location.href = otherPageUrl;
   });
+});
+var supprimer = document.querySelectorAll("#supprimer");
+supprimer.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    let idToDel = e.target.getAttribute("data-index");
+    const items = JSON.parse(localStorage.getItem("panier"));
+
+    let afterSupp = items.filter((item) => item.id != idToDel);
+
+    localStorage.setItem("panier", JSON.stringify(afterSupp));
+    location.reload();
+
+  });
+});
+
+let clearing = document.getElementById("clear");
+clearing.addEventListener("click", function () {
+  localStorage.clear("panier");
+  location.reload();
 });

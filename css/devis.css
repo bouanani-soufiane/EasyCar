@@ -58,13 +58,10 @@ main h2 {
 }
 
 
-.TVA {
-    float: right;
-}
+
 
 .prix-total {
     color: blue;
-    font-size: xx-large;
+    font-size: 1.4rem;
     font-weight: 700;
-    float: right;
 }
