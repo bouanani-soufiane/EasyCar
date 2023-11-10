@@ -268,7 +268,7 @@ function addToPanier() {
   var data = JSON.parse(localStorage.getItem("panier"));
   console.log("hyee" + JSON.stringify(data));
   for (let item of data) {
-    const modalRent = `<li class="row d-flex justify-content-end  " style="width: 350px;">
+    const modalRent = `<li class="row d-flex justify-content-end zindex-dropdown  " style="width: 350px;">
       <div class="col-4">
         <img src="${item.img}" alt="img" class="img-fluid small-image ms-1">
       </div>

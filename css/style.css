@@ -67,6 +67,25 @@ body {
   padding: 0.5em 1em;
 }
 
+.fixed-panier {
+  position: fixed;
+  right: 0;
+}
+
+.zindex-dropdown {
+  z-index: 99;
+}
+
+.fa-cart-shopping {
+  background-color: #026dfe;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-brand img {
     width: 100px;
@@ -76,6 +95,8 @@ body {
     margin-right: 0;
     padding: 0 1em;
   }
+
+
 }
 
 /* -------------------------------------------------------------------------------------------------------- */
@@ -212,7 +233,7 @@ html {
 
 .who-are-we {
   width: 100vw;
-  height:auto;
+  height: auto;
   background-color: white;
 }
 
@@ -415,6 +436,7 @@ html {
   .hero-section {
     height: 45vh;
   }
+
 }
 
 /* reservation page page */
@@ -492,6 +514,15 @@ main .check-in h2.mb-5 {
 .btn-group .button:focus {
   background-color: #888;
   color: white;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filters div {
+  width: 20%;
 }
 
 .filter-button {
