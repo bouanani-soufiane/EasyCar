@@ -198,7 +198,7 @@ function filterCards() {
   var filters = document.querySelectorAll(".filter");
   filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      var value = this.getAttribute("data-filter");
+      var value = this.getAttribute("data-filter"); 
 
       filters.forEach(function (filter) {
         if (!filter.classList.contains(value)) {
@@ -216,11 +216,12 @@ var dataTable = [];
 var panierData = JSON.parse(localStorage.getItem("panier"));
 var counter = panierData ? panierData.length + 1 : 1;
 
+
 var ajouterBtn = document.querySelectorAll("#ajouter");
 function handleAjouterClick(btn) {
   var dataIndex = btn.getAttribute("data-index");
   var data = JSON.parse(localStorage.getItem("dataobj"));
-  var cardTitle = data[dataIndex - 1].title;
+  var cardTitle = data[dataIndex - 1].title;  
   var cardPrice = data[dataIndex - 1].price;
   var cardImage = data[dataIndex - 1].img;
   var cardCateg = data[dataIndex - 1].categorie;
@@ -287,6 +288,7 @@ function addToPanier() {
     panier_items.insertAdjacentHTML("afterbegin", modalRent);
   }
 }
+
 addToPanier();
 
 var personaliser = document.querySelectorAll("#personaliser");
@@ -303,12 +305,9 @@ supprimer.forEach((button) => {
   button.addEventListener("click", (e) => {
     let idToDel = e.target.getAttribute("data-index");
     const items = JSON.parse(localStorage.getItem("panier"));
-
     let afterSupp = items.filter((item) => item.id != idToDel);
-
     localStorage.setItem("panier", JSON.stringify(afterSupp));
     location.reload();
-
   });
 });
 
