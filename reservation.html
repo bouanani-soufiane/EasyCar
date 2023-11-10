@@ -42,10 +42,10 @@
             <li class="nav-item mx-3">
               <a class="nav-link" href="./contact-us.html">Contact Us</a>
             </li>
-            <li class="dropdown fixed-top text-end pt-3 mx-5  " id="panier">
+            <li class="dropdown fixed-panier text-end pt-3 mx-5  zindex-dropdown " id="panier">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-cart-shopping"></i> </a>
-              <ul class="dropdown-menu bg-dark sticky-top dropdown-menu-end" id="panier-items"
+                <i class="fa-solid fa-cart-shopping  zindex-dropdown"></i> </a>
+              <ul class="dropdown-menu bg-dark dropdown-menu-end zindex-dropdown" id="panier-items"
                 style="height: 350px; overflow-y: auto; overflow-x: hidden; ">
                 <hr class="custom-hr">
                 <div class="row d-flex justify-content-between ">
@@ -59,6 +59,7 @@
         </div>
       </div>
     </nav>
+
     <div class="d-flex align-items-center justify-content-center heading" style="height: 100vh">
       <div class="text-center">
         <div class="text-center">HOME / RESERVATION</div>
@@ -94,18 +95,21 @@
 
 
 
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="filters" class="button-group">
+      <div class="row  mb-4">
+        <span class="h4 col-12">categories</span>
+      </div>
+      <div class=" filters container ">
 
-            <span class="h4">categories</span>
 
-            <button class="btn px-5 filter-button btn-primary" data-filter="sport">sport</button>
-            <button class="btn px-5 filter-button btn-primary" data-filter="suv">suv</button>
-            <button class="btn px-5 filter-button btn-primary" data-filter="sedan">sedan</button>
-          </div>
+        <div class="col-4"><button class="btn filter-button btn-primary" data-filter="sport">sport</button>
+        </div>
+        <div class="col-4"><button class="btn filter-button btn-primary" data-filter="suv">suv</button>
+        </div>
+        <div class="col-4"><button class="btn filter-button btn-primary" data-filter="sedan">sedan</button>
         </div>
       </div>
+
+
 
       <!-- Add a modal container that will be hidden by default -->
       <div id="myModal" class="modal" id="modal">
@@ -139,8 +143,8 @@
       </div>
 
       <div class="container row mx-auto d-flex justify-content-center " id="cards" style="display: none;">
-      
-      
+
+
       </div>
 
       <naxv aria-label="pagination text-center d-flex justify-content-center">
