@@ -20,6 +20,6 @@ Visit our Jira board to keep track of project progress and tasks: [EasyCar](http
 
 ### 4. Presentation
 
-Explore the detailed project brief and design concepts on our Canva presentation: [EasyCar Canva Presentation](.....)
+Explore the detailed project brief and design concepts on our Canva presentation: [EasyCar Canva Presentation](https://www.canva.com/design/DAFzHbjoW_E/-1XuLwPCr3J4zdYQ3EOw2Q/edit)
 
 ## Some Resources :
